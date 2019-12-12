@@ -1,0 +1,38 @@
+<html lang="en"> 
+    <head> 
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+        <title>Catch</title> 
+    </head> 
+    <body> 
+            <button onclick="playPause()">Play/Pause</button> 
+            <button onclick="makeBig()">Big</button>
+            <button onclick="makeSmall()">Small</button>
+            <button onclick="makeNormal()">Normal</button>
+            <br><br>
+            <video id="video1" width="640" height="480" controls>
+                    <source src="1.webm" type="video/webm">
+            </video>
+            <script> 
+                    var myVideo = document.getElementById("video1"); 
+                    
+                    function playPause() { 
+                      if (myVideo.paused) 
+                        myVideo.play(); 
+                      else 
+                        myVideo.pause(); 
+                    } 
+                    
+                    function makeBig() { 
+                        myVideo.width = 560; 
+                    } 
+                    
+                    function makeSmall() { 
+                        myVideo.width = 320; 
+                    } 
+                    
+                    function makeNormal() { 
+                        myVideo.width = 420; 
+                    } 
+            </script> 
+    </body> 
+</html>
